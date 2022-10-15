@@ -1,10 +1,19 @@
 package fi.tapani.movie_service.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
+import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,20 +24,31 @@ public class Movie {
   @GeneratedValue
   private UUID id;
 
-  @Column(name = "name", nullable = false)
+  @Column(nullable = false)
   private String name;
 
-  @Column(name = "year", nullable = false)
+  @Column(nullable = false)
   private int year;
 
-  @Column(name = "synopsis")
+  @Column
   private String synopsis;
 
-  @Column(name = "ageLimit")
+  @Column
   private int ageLimit;
 
-  @Column(name = "rating")
+  @Column
   private int rating;
+
+  @ElementCollection
+  @CollectionTable(name = "movie_genres")
+  private List<String> genres = new ArrayList<>();
+
+  @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL,
+      orphanRemoval = true)
+  private List<Person> actors = new ArrayList<>();
+
+  @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+  private Person director;
 
   public Movie() {
   }
@@ -40,10 +60,6 @@ public class Movie {
 
   public UUID getId() {
     return id;
-  }
-
-  public void setId(UUID id) {
-    this.id = id;
   }
 
   public String getName() {
@@ -84,5 +100,29 @@ public class Movie {
 
   public void setRating(int rating) {
     this.rating = rating;
+  }
+
+  public List<String> getGenres() {
+    return genres;
+  }
+
+  public void setGenres(List<String> genres) {
+    this.genres = genres;
+  }
+
+  public List<Person> getActors() {
+    return actors;
+  }
+
+  public void setActors(List<Person> actors) {
+    this.actors = actors;
+  }
+
+  public Person getDirector() {
+    return director;
+  }
+
+  public void setDirector(Person director) {
+    this.director = director;
   }
 }
