@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "e3b3caac-b7fb-4609-ac21-51772d8c4569",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Avengers: Endgame\",\n        \"year\": 2018,\n        \"genres\": [\n            \"Adventure\",\n            \"Sci-fi\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 4,\n        \"actors\": [\n            {\n                \"firstName\": \"Robert\",\n                \"lastName\": \"Downey Jr.\"\n            },\n            {\n                \"firstName\": \"Chris\",\n                \"lastName\": \"Evans\"\n            },\n            {\n                \"firstName\": \"Scarlett\",\n                \"lastName\": \"Johansson\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Anthony\",\n            \"lastName\": \"Russo\"\n        },\n        \"synopsis\": \"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.\"\n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/movie/add-movie",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"add-movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Avengers: Endgame\",\n        \"year\": 2018,\n        \"genres\": [\n            \"Adventure\",\n            \"Sci-fi\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 4,\n        \"actors\": [\n            {\n                \"firstName\": \"Robert\",\n                \"lastName\": \"Downey Jr.\"\n            },\n            {\n                \"firstName\": \"Chris\",\n                \"lastName\": \"Evans\"\n            },\n            {\n                \"firstName\": \"Scarlett\",\n                \"lastName\": \"Johansson\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Anthony\",\n            \"lastName\": \"Russo\"\n        },\n        \"synopsis\": \"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.\"\n    },\n    {\n        \"name\": \"The Curse of the Were-Rabbit\",\n        \"year\": 2005,\n        \"genres\": [\n            \"Animation\",\n            \"Adventure\",\n            \"Comedy\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 4,\n        \"actors\": [\n            {\n                \"firstName\": \"Peter\",\n                \"lastName\": \"Sallis\"\n            },\n            {\n                \"firstName\": \"Ralph\",\n                \"lastName\": \"Fiennes\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Steve\",\n            \"lastName\": \"Box\"\n        },\n        \"synopsis\": \"Wallace and his loyal dog, Gromit, set out to discover the mystery behind the garden sabotage that plagues their village and threatens the annual giant vegetable growing contest.\"\n    },\n    {\n        \"name\": \"Downtown Abbey\",\n        \"year\": 2019,\n        \"genres\": [\n            \"Drama\"\n        ],\n        \"ageLimit\": 7,\n        \"rating\": 3,\n        \"actors\": [\n            {\n                \"firstName\": \"Michelle\",\n                \"lastName\": \"Dockery\"\n            },\n            {\n                \"firstName\": \"Matthew\",\n                \"lastName\": \"Goode\"\n            },\n            {\n                \"firstName\": \"Tuppence\",\n                \"lastName\": \"Middleton\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Michael\",\n            \"lastName\": \"Enger\"\n        },\n        \"synopsis\": \"The continuing story of the Crawley family, wealthy owners of a large estate in the English countryside in the early 20th century.\"\n    },\n    {\n        \"name\": \"Ad Astra\",\n        \"year\": 2019,\n        \"genres\": [\n            \"Adventure\",\n            \"Drama\",\n            \"Mystery\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 3,\n        \"actors\": [\n            {\n                \"firstName\": \"Brad\",\n                \"lastName\": \"Pitt\"\n            },\n            {\n                \"firstName\": \"Tommy\",\n                \"lastName\": \"Lee Jones\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"James\",\n            \"lastName\": \"Grey\"\n        },\n        \"synopsis\": \"Astronaut Roy McBride undertakes a mission across an unforgiving solar system to uncover the truth about his missing father and his doomed expedition that now, 30 years later, threatens the universe.\"\n    },\n    {\n        \"name\": \"The Dark Crystal\",\n        \"year\": 1982,\n        \"genres\": [\n            \"Adventure\",\n            \"Familty\",\n            \"Fantasy\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 3,\n        \"actors\": [\n            {\n                \"firstName\": \"Jim\",\n                \"lastName\": \"Henson\"\n            },\n            {\n                \"firstName\": \"Catherine\",\n                \"lastName\": \"Mullen\"\n            },\n            {\n                \"firstName\": \"Frank\",\n                \"lastName\": \"Oz\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Jim\",\n            \"lastName\": \"Henson\"\n        },\n        \"synopsis\": \"On another planet in the distant past, a Gelfling embarks on a quest to find the missing shard of a magical crystal, and so restore order to his world.\"\n    },\n    {\n        \"name\": \"Aliens\",\n        \"year\": 1986,\n        \"genres\": [\n            \"Action\",\n            \"Adventure\",\n            \"Sci-fi\"\n        ],\n        \"ageLimit\": 16,\n        \"rating\": 5,\n        \"actors\": [\n            {\n                \"firstName\": \"Sigourney\",\n                \"lastName\": \"Weaver\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"James\",\n            \"lastName\": \"Cameron\"\n        },\n        \"synopsis\": \"Ellen Ripley is rescued by a deep salvage team after being in hypersleep for 57 years. The moon that the Nostromo visited has been colonized, but contact is lost. This time, colonial marines have impressive firepower, but will that be enough?\"\n    },\n    {\n        \"name\": \"2001: A Space Odyssey\",\n        \"year\": 1986,\n        \"genres\": [\n            \"Adventure\",\n            \"Sci-fi\"\n        ],\n        \"ageLimit\": 8,\n        \"rating\": 5,\n        \"actors\": [\n            {\n                \"firstName\": \"Keir\",\n                \"lastName\": \"Dullea\"\n            },\n            {\n                \"firstName\": \"Gary\",\n                \"lastName\": \"Lockwood\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Stanley\",\n            \"lastName\": \"Kubrick\"\n        },\n        \"synopsis\": \"After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer H.A.L. 9000.\"\n    },\n    {\n        \"name\": \"Tolkien\",\n        \"year\": 2019,\n        \"genres\": [\n            \"Biography\",\n            \"Drama\",\n            \"War\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 2,\n        \"actors\": [\n            {\n                \"firstName\": \"Nicholas\",\n                \"lastName\": \"Dullea\"\n            },\n            {\n                \"firstName\": \"Lily\",\n                \"lastName\": \"Collins\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Dome\",\n            \"lastName\": \"Karkukoski\"\n        },\n        \"synopsis\": \"The formative years of the orphaned author J.R.R. Tolkien as he finds friendship, love and artistic inspiration among a group of fellow outcasts at school.\"\n    },\n    {\n        \"name\": \"The Shape of Water\",\n        \"year\": 2017,\n        \"genres\": [\n            \"Adventure\",\n            \"Drama\",\n            \"Fantasy\"\n        ],\n        \"ageLimit\": 16,\n        \"rating\": 4,\n        \"actors\": [\n            {\n                \"firstName\": \"Sally\",\n                \"lastName\": \"Hawkins\"\n            },\n            {\n                \"firstName\": \"Michael\",\n                \"lastName\": \"Shannon\"\n            },\n            {\n                \"firstName\": \"Octavia\",\n                \"lastName\": \"Spencer\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Guillermo\",\n            \"lastName\": \"del Toro\"\n        },\n        \"synopsis\": \"At a top secret research facility in the 1960s, a lonely janitor forms a unique relationship with an amphibious creature that is being held in captivity.\"\n    },\n    {\n        \"name\": \"Vertigo\",\n        \"year\": 1958,\n        \"genres\": [\n            \"Mystery\",\n            \"Romance\",\n            \"Thriller\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 5,\n        \"actors\": [\n            {\n                \"firstName\": \"James\",\n                \"lastName\": \"Stewart\"\n            },\n            {\n                \"firstName\": \"Kim\",\n                \"lastName\": \"Novak\"\n            },\n            {\n                \"firstName\": \"Barbara\",\n                \"lastName\": \"Bel Geddes\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Alfred\",\n            \"lastName\": \"Hitchcock\"\n        },\n        \"synopsis\": \"A former police detective juggles wrestling with his personal demons and becoming obsessed with a hauntingly beautiful woman.\"\n    },\n    {\n        \"name\": \"Blade Runner 2049\",\n        \"year\": 2017,\n        \"genres\": [\n            \"Action\",\n            \"Drama\",\n            \"Mystery\"\n        ],\n        \"ageLimit\": 15,\n        \"rating\": 5,\n        \"actors\": [\n            {\n                \"firstName\": \"Ryan\",\n                \"lastName\": \"Gosling\"\n            },\n            {\n                \"firstName\": \"Harrison\",\n                \"lastName\": \"Ford\"\n            },\n            {\n                \"firstName\": \"Robin\",\n                \"lastName\": \"Wright\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Denis\",\n            \"lastName\": \"Villeneuve\"\n        },\n        \"synopsis\": \"A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years.\"\n    },\n    {\n        \"name\": \"Drive\",\n        \"year\": 2011,\n        \"genres\": [\n            \"Crime\",\n            \"Drama\"\n        ],\n        \"ageLimit\": 18,\n        \"rating\": 4,\n        \"actors\": [\n            {\n                \"firstName\": \"Ryan\",\n                \"lastName\": \"Gosling\"\n            },\n            {\n                \"firstName\": \"Carey\",\n                \"lastName\": \"Mulligan\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Nicholas\",\n            \"lastName\": \"Winding Refn\"\n        },\n        \"synopsis\": \"A mysterious Hollywood stuntman and mechanic moonlights as a getaway driver and finds himself in trouble when he helps out his neighbor.\"\n    },\n    {\n        \"name\": \"Dumb and Dumber\",\n        \"year\": 1994,\n        \"genres\": [\n            \"Comedy\"\n        ],\n        \"ageLimit\": 12,\n        \"rating\": 3,\n        \"actors\": [\n            {\n                \"firstName\": \"Jim\",\n                \"lastName\": \"Carrey\"\n            },\n            {\n                \"firstName\": \"Jeff\",\n                \"lastName\": \"Daniels\"\n            },\n            {\n                \"firstName\": \"Lauren\",\n                \"lastName\": \"Holly\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Peter\",\n            \"lastName\": \"Farrelly\"\n        },\n        \"synopsis\": \"After a woman leaves a briefcase at the airport terminal, a dumb limo driver and his dumber friend set out on a hilarious cross-country road trip to Aspen, to return the briefcase to its owner.\"\n    },\n    {\n        \"name\": \"Raiders of the Lost Ark\",\n        \"year\": 1981,\n        \"genres\": [\n            \"Action\",\n            \"Adventure\"\n        ],\n        \"ageLimit\": 0,\n        \"rating\": 4,\n        \"actors\": [\n            {\n                \"firstName\": \"Harrison\",\n                \"lastName\": \"Ford\"\n            },\n            {\n                \"firstName\": \"Karen\",\n                \"lastName\": \"Allen\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Steven\",\n            \"lastName\": \"Spielberg\"\n        },\n        \"synopsis\": \"In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government to find the Ark of the Covenant before Adolf Hitler's Nazis can obtain its awesome powers.\"\n    },\n    {\n        \"name\": \"Gremlins\",\n        \"year\": 1984,\n        \"genres\": [\n            \"Comedy\",\n            \"Fantasy\",\n            \"Horror\"\n        ],\n        \"ageLimit\": 15,\n        \"rating\": 3,\n        \"actors\": [\n            {\n                \"firstName\": \"Hoyt\",\n                \"lastName\": \"Axton\"\n            },\n            {\n                \"firstName\": \"John\",\n                \"lastName\": \"Louie\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Joe\",\n            \"lastName\": \"Dante\"\n        },\n        \"synopsis\": \"A boy inadvertently breaks three important rules concerning his new pet and unleashes a horde of malevolently mischievous monsters on a small town.\"\n    },\n    {\n        \"name\": \"The Florida Project\",\n        \"year\": 2017,\n        \"genres\": [\n            \"Drama\"\n        ],\n        \"ageLimit\": 15,\n        \"rating\": 3,\n        \"actors\": [\n            {\n                \"firstName\": \"Brooklynn\",\n                \"lastName\": \"Prince\"\n            },\n            {\n                \"firstName\": \"Christopher\",\n                \"lastName\": \"Rivera\"\n            },\n            {\n                \"firstName\": \"Willem\",\n                \"lastName\": \"Dafoe\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Sean\",\n            \"lastName\": \"Baker\"\n        },\n        \"synopsis\": \"Set over one summer, the film follows precocious six-year-old Moonee as she courts mischief and adventure with her ragtag playmates and bonds with her rebellious but caring mother, all while living in the shadows of Walt Disney World.\"\n    },\n    {\n        \"name\": \"Predator\",\n        \"year\": 1987,\n        \"genres\": [\n            \"Action\",\n            \"Adventure\",\n            \"Sci-fi\"\n        ],\n        \"ageLimit\": 18,\n        \"rating\": 4,\n        \"actors\": [\n            {\n                \"firstName\": \"Arnold\",\n                \"lastName\": \"Schwarzenegger\"\n            },\n            {\n                \"firstName\": \"Carl\",\n                \"lastName\": \"Weathers\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"John\",\n            \"lastName\": \"McTiernan\"\n        },\n        \"synopsis\": \"A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior.\"\n    },\n    {\n        \"name\": \"Spirited Away\",\n        \"year\": 2001,\n        \"genres\": [\n            \"Animation\",\n            \"Adventure\",\n            \"Family\"\n        ],\n        \"ageLimit\": 0,\n        \"rating\": 5,\n        \"actors\": [\n            {\n                \"firstName\": \"Rumi\",\n                \"lastName\": \"Hiiragi\"\n            },\n            {\n                \"firstName\": \"Miyu\",\n                \"lastName\": \"Irino\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Hayao\",\n            \"lastName\": \"Miyazaki\"\n        },\n        \"synopsis\": \"During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.\"\n    },\n    {\n        \"name\": \"Saving Private Ryan\",\n        \"year\": 1998,\n        \"genres\": [\n            \"Drama\",\n            \"War\"\n        ],\n        \"ageLimit\": 15,\n        \"rating\": 3,\n        \"actors\": [\n            {\n                \"firstName\": \"Tom\",\n                \"lastName\": \"Hanks\"\n            },\n            {\n                \"firstName\": \"Tom\",\n                \"lastName\": \"Sizemore\"\n            },\n            {\n                \"firstName\": \"Edward\",\n                \"lastName\": \"Burns\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Steven\",\n            \"lastName\": \"Spielberg\"\n        },\n        \"synopsis\": \"Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.\"\n    },\n    {\n        \"name\": \"Rambo: Last Blood\",\n        \"year\": 2019,\n        \"genres\": [\n            \"Action\",\n            \"Adventure\",\n            \"Thriller\"\n        ],\n        \"ageLimit\": 18,\n        \"rating\": 2,\n        \"actors\": [\n            {\n                \"firstName\": \"Sylvester\",\n                \"lastName\": \"Stallone\"\n            },\n            {\n                \"firstName\": \"Paz\",\n                \"lastName\": \"Vega\"\n            },\n            {\n                \"firstName\": \"Yvette\",\n                \"lastName\": \"Monreal\"\n            }\n        ],\n        \"director\": {\n            \"firstName\": \"Adrian\",\n            \"lastName\": \"Grunberg\"\n        },\n        \"synopsis\": \"Rambo must confront his past and unearth his ruthless combat skills to exact revenge in a final mission.\"\n    }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/movie/add-movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"add-movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movie/ed8ccd3b-8a98-4bd4-bbb1-2930a4c5fe4e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"ed8ccd3b-8a98-4bd4-bbb1-2930a4c5fe4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movie/all-movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"all-movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movie/ed8ccd3b-8a98-4bd4-bbb1-2930a4c5fe4e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"ed8ccd3b-8a98-4bd4-bbb1-2930a4c5fe4e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

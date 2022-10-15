@@ -1,5 +1,8 @@
+application-*.properties
+
 HELP.md
 target/
+docker/*.jar
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

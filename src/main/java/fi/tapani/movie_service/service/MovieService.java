@@ -1,7 +1,7 @@
 package fi.tapani.movie_service.service;
 
 import fi.tapani.movie_service.model.Movie;
-import fi.tapani.movie_service.reps.MovieRepository;
+import fi.tapani.movie_service.repository.MovieRepository;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -31,5 +31,17 @@ public class MovieService {
 
   public Optional<Movie> getMovie(UUID id) {
     return movieRepository.findById(id);
+  }
+
+  public void deleteMovie(UUID id) {
+    movieRepository.deleteById(id);
+  }
+
+  public List<Movie> getAllMovies() {
+    return movieRepository.findAll();
+  }
+
+  public Optional<Movie> findByName(String movieName) {
+    return movieRepository.findByName(movieName);
   }
 }

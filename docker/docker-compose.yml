@@ -2,17 +2,19 @@ version: '2'
 
 services:
   app:
-    image: 'jpa-demo:latest'
+    image: 'movie-service:latest'
     build:
       context: .
     container_name: app
     depends_on:
       - db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/jpa-demo
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/movie-service
       - SPRING_DATASOURCE_USERNAME=test
       - SPRING_DATASOURCE_PASSWORD=test
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    ports:
+      - "8080:8080"
           
   db:
     image: 'postgres:13.1-alpine'
@@ -20,4 +22,4 @@ services:
     environment:
       - POSTGRES_USER=test
       - POSTGRES_PASSWORD=test
-      - POSTGRES_DB=jpa-demo
+      - POSTGRES_DB=movie-service
